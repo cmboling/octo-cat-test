@@ -1,0 +1,231 @@
+{
+	"info": {
+		"_postman_id": "c4ff5f9c-1979-4184-a4db-c2c2ebc1455b",
+		"name": "Gallery service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get gallery",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/gallery",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"gallery"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all art",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/gallery/art",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"gallery",
+						"art"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add art piece",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"The big O\",\n    \"description\": \"The big O has inspired many developers during their career\",\n    \"uri\": \"http://the-big-o.com/big-o.png\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/gallery/art",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"gallery",
+						"art"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update gallery",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":1,\"title\":\"The awesome gallery\",\"description\":\"This gallery is in desperate need of some art!\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/gallery",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"gallery"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update art",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\":\"The big O\",\"description\":\"The big O has inspired many developers during their career\",\"stars\":1,\"uri\":\"http://the-big-o.com/big-o.png\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/gallery/art/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"gallery",
+						"art",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get art",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/gallery/art/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"gallery",
+						"art",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete art",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/gallery/art/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"gallery",
+						"art",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{access_token}}",
+				"type": "string"
+			},
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "93169b84-bf5a-4707-83dc-b094a595d5f8",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "02de64fe-4d3d-4876-8e8e-157af34485f3",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "813767d2-4b6b-4caa-8b15-b4998c2dcf90",
+			"key": "access_token",
+			"value": ""
+		}
+	],
+	"protocolProfileBehavior": {}
+}

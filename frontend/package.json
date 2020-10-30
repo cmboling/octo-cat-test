@@ -9,7 +9,7 @@
     "exec": "PATH=$(npm bin):$PATH"
   },
   "dependencies": {
-    "lodash": "4.17.18",
+    "lodash": "4.17.19",
     "hot-formula-parser": "^3.0.0",
     "axios": "0.18.0",
     "core-js": "^3.6.5",
